@@ -62,6 +62,7 @@ a {
 .profile {
   display: flex;
   grid-area: a;
+  gap: 20px;
 }
 .profile__img {
   width: 200px;
@@ -174,7 +175,7 @@ a {
   margin-bottom: 15px;
   font-weight: 700;
 }
-.education__item  ul {
+.education__item ul {
   font-weight: 400;
 }
 .education__item ul li a {
@@ -207,3 +208,38 @@ a {
   font-size: 30px;
 }
 
+@media (max-width: 768px) {
+  .main {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'a' 'b' 'c' 'd' 'e' 'f' 'g';
+    margin-bottom: 45px;
+  }
+  .profile__title-main {
+    font-size: 48px;
+  }
+  .contacts,
+  .about,
+  .skills,
+  .education,
+  .language {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    display: none;
+  }
+  .profile {
+flex-direction: column;
+  }
+  .profile__title-main {
+    font-size: 35px;
+  }
+  .code {
+    display: none;
+  }
+}
